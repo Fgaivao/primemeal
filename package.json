@@ -1,0 +1,55 @@
+{
+  "name": "PrimeMeal",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@react-native-community/async-storage": "^1.12.1",
+    "@react-native-community/checkbox": "^0.5.7",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/drawer": "^5.12.5",
+    "@react-navigation/native": "^5.9.4",
+    "@react-navigation/stack": "^5.14.3",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "native-base": "^2.15.2",
+    "react": "16.13.1",
+    "react-moment": "^1.1.1",
+    "react-native": "0.63.4",
+    "react-native-anchor-carousel": "^4.0.1",
+    "react-native-chart-kit": "^6.11.0",
+    "react-native-date-picker": "^3.3.0",
+    "react-native-elements": "^3.4.1",
+    "react-native-gesture-handler": "^1.10.3",
+    "react-native-picker-checkbox": "^2.0.2",
+    "react-native-reanimated": "^1.13.2",
+    "react-native-safe-area-context": "^3.2.0",
+    "react-native-screens": "^2.18.1",
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-svg": "^12.1.1",
+    "react-native-vector-icons": "^8.1.0",
+    "react-navigation": "^4.4.4",
+    "react-navigation-stack": "^2.10.4",
+    "rn-checkbox-list": "^0.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/runtime": "^7.13.9",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.21.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.65.2",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
