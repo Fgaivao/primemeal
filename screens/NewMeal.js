@@ -76,9 +76,9 @@ export default class mealNew extends Component {
       modalVisibleconfHort: false,
       modalVisibleHid: false,
 
-      protperc: 25,
-      hidrperc: 34,
-      hortperc: 0,
+      protperc: 33,
+      hidrperc: 33,
+      hortperc: 33,
       percentageProteinValue: 0,
       percentageHidratesValue: 0,
       percentageVegetablesValue: 0,
@@ -124,7 +124,7 @@ export default class mealNew extends Component {
       this.setState({percentageProteinValue: 0});
     }
     if (
-      this.state.current_user.goal == 'Perder peso' &&
+      this.state.current_user.goal == 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.protperc > 9 &&
       this.state.protperc < 19
     ) {
@@ -132,7 +132,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal != 'Perder peso' &&
+      this.state.current_user.goal != 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.protperc > 9 &&
       this.state.protperc < 19
     ) {
@@ -140,14 +140,14 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal != 'Perder peso' &&
+      this.state.current_user.goal != 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.protperc > 19 &&
       this.state.protperc < 29
     ) {
       this.setState({percentageProteinValue: 6});
     }
     if (
-      this.state.current_user.goal == 'Perder peso' &&
+      this.state.current_user.goal == 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.protperc > 19 &&
       this.state.protperc < 29
     ) {
@@ -155,7 +155,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal == 'Perder peso' &&
+      this.state.current_user.goal == 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.protperc > 29 &&
       this.state.protperc < 39
     ) {
@@ -163,7 +163,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal != 'Perder peso' &&
+      this.state.current_user.goal != 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.protperc > 29 &&
       this.state.protperc < 39
     ) {
@@ -191,7 +191,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal != 'Perder peso' &&
+      this.state.current_user.goal != 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.hidrperc > 19 &&
       this.state.hidrperc < 29
     ) {
@@ -199,7 +199,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal != 'Perder peso' &&
+      this.state.current_user.goal != 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.hidrperc > 29 &&
       this.state.hidrperc < 39
     ) {
@@ -207,7 +207,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal == 'Perder peso' &&
+      this.state.current_user.goal == 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.hidrperc > 29 &&
       this.state.hidrperc < 39
     ) {
@@ -215,7 +215,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal == 'Perder peso' &&
+      this.state.current_user.goal == 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.hidrperc > 39 &&
       this.state.hidrperc < 49
     ) {
@@ -223,7 +223,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal != 'Perder peso' &&
+      this.state.current_user.goal != 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.hidrperc > 39 &&
       this.state.hidrperc < 49
     ) {
@@ -243,7 +243,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal == 'Perder peso' &&
+      this.state.current_user.goal == 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.hortperc > 49 &&
       this.state.hortperc < 59
     ) {
@@ -251,7 +251,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal != 'Perder peso' &&
+      this.state.current_user.goal != 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.hortperc > 49 &&
       this.state.hortperc < 59
     ) {
@@ -259,7 +259,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal == 'Perder peso' &&
+      this.state.current_user.goal == 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.hortperc > 59 &&
       this.state.hortperc < 69
     ) {
@@ -267,7 +267,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal != 'Perder peso' &&
+      this.state.current_user.goal != 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.hortperc > 59 &&
       this.state.hortperc < 69
     ) {
@@ -275,7 +275,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal == 'Perder peso' &&
+      this.state.current_user.goal == 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.hortperc > 69 &&
       this.state.hortperc < 79
     ) {
@@ -283,7 +283,7 @@ export default class mealNew extends Component {
     }
 
     if (
-      this.state.current_user.goal != 'Perder peso' &&
+      this.state.current_user.goal != 'Perder peso' || 'alimentação + saudável e equilibrada' &&
       this.state.hortperc > 69 &&
       this.state.hortperc < 79
     ) {
@@ -299,19 +299,19 @@ export default class mealNew extends Component {
     const {percentageProteinValue} = this.state;
     const {percentageVegetablesValue} = this.state;
     const {percentageHidratesValue} = this.state;
-    const proint = parseInt(this.state.proteins);
+    const proint = parseInt(this.state.proteins[0]);
 
     const proconfint = parseInt(this.state.proteinconfection);
 
     const sumProt = proint + percentageProteinValue + proconfint;
 
-    const hidrint = parseInt(this.state.hydrates);
+    const hidrint = parseInt(this.state.hydrates[0]);
 
     const hidrconfint = parseInt(this.state.hydratesconfection);
 
     const sumHidr = percentageHidratesValue + hidrint + proconfint;
 
-    const vegeint = parseInt(this.state.vegetables);
+    const vegeint = parseInt(this.state.vegetables[0]);
 
     const vegeconfint = parseInt(this.state.vegetablesconfection);
 
@@ -389,11 +389,14 @@ export default class mealNew extends Component {
       })
         .then((response) => response.json())
         .then((responseData) => {
-          console.log('RESPONSE', responseData);
+          console.log('RESPONSE', responseData.status);
+          console.log(responseData.name[0])
 
           if (responseData.status === 500) {
             Alert.alert('Só podes criar uma refeição por dia');
-          } else {
+          }
+
+           else {
             this.props.navigation.navigate('Score');
           }
         })
@@ -510,12 +513,13 @@ export default class mealNew extends Component {
           <Text style={styles.title}>Adicionar Jantar</Text>
           <View style={styles.addmeal}>
             <Image source={newmeal}></Image>
-
+            <View style={{borderBottom: 2}}>
             <TextInput
               placeholder="nome do prato"
               onChangeText={(txt) => this.setState({name: txt})}
-              style={{textAlign: 'center', marginBottom: 6, height: 45}}
+              style={{textAlign: 'center', marginBottom: 6, height: 45, borderBottomWidth: 1}}
             />
+            </View>
 
             <Pressable style={[styles.buttonOpen, styles.prot, styles.confec]}>
               <Picker
@@ -533,66 +537,66 @@ export default class mealNew extends Component {
                 <Picker.Item label="proteínas" value="proteínas" />
                 <Picker.Item
                   label="Carnes vermelhas (vaca, porco, borrego, cabrito)"
-                  value={current_user.goal == 'perder peso' ? '2, ' : '4, '}
+                  value={current_user.goal == 'perder peso' || 'alimentação + saudável e equilibrada' ? '2, Carnes vermelhas (vaca, porco, borrego, cabrito)' : '4, Carnes vermelhas (vaca, porco, borrego, cabrito)'}
                 />
 
                 <Picker.Item
                   label="Carnes brancas (frango, perú, coelho, pato)"
-                  value={current_user.goal == 'alimentação sustentável' ? '9, ' : '10, '}
+                  value={current_user.goal == 'alimentação sustentável' || 'alimentação + saudável e sustentável' ? '9, Carnes brancas (frango, perú, coelho, pato)' : '10, Carnes brancas (frango, perú, coelho, pato)'}
                 />
 
 
                 <Picker.Item
                   label="Ovos"
                   value={
-                    current_user.goal == 'alimentação sustentável'
-                      ? '8, '
-                      : '9, '
+                    current_user.goal == 'alimentação sustentável' || 'alimentação + saudável e sustentável'
+                      ? '8, Ovos'
+                      : '9, Ovos'
                   }
                 />
 
-                <Picker.Item label="Pescado" value='10, 0'  />
+                <Picker.Item label="Pescado" value='10, Pescado'  />
                 <Picker.Item
                   label="Queijo, fiambre"
                   value={
-                    current_user.goal == 'alimentação sustentável'
-                      ? '4, '
-                      : '5, '
+                    current_user.goal == 'alimentação sustentável' || 'alimentação + saudável e sustentável'
+                      ? '4, Queijo, fiambre'
+                      : '5, Queijo, fiambre'
                   }
                 />
                 <Picker.Item
                   label="Leguminosas secas (grão, feijão, lentilhas)"
                   value={
-                    current_user.goal == 'alimentação sustentável'
-                      ? '10, '
-                      : '8, '
+                    current_user.goal == 'alimentação sustentável' || 'alimentação + saudável e sustentável'
+                      ? '10, Leguminosas secas (grão, feijão, lentilhas)'
+                      : '8, Leguminosas secas (grão, feijão, lentilhas)'
                   }
                 />
 
                 <Picker.Item
                   label="Leguminosas verdes (ervilhas, favas, edamame)"
                   value={
-                    current_user.goal == 'alimentação sustentável'
-                      ? '8, 0'
-                      : '7, 0'
+                    current_user.goal == 'alimentação sustentável' || 'alimentação + saudável e sustentável'
+                      ? '8, Leguminosas verdes (ervilhas, favas, edamame)'
+                      : '7, Leguminosas verdes (ervilhas, favas, edamame)'
                   }
                 />
 
                 <Picker.Item
                   label="Cereais, sementes, quinoa, frutos secos"
                   value={
-                    current_user.goal == 'alimentação sustentável'
-                      ? '8, '
-                      : '7, '
+                    current_user.goal == 'alimentação sustentável' || 'alimentação + saudável e sustentável'
+                      ? '8, Cereais, sementes, quinoa, frutos secos'
+                      : '7, Cereais, sementes, quinoa, frutos secos'
                   }
                 />
 
                 <Picker.Item
                   label="Cogumelos, tofu, seitan"
                   value={
-                    current_user.goal == 'alimentação sustentável'
-                      ? '9, 0'
-                      : '8, 0'
+                    current_user.goal == 'alimentação sustentável' || 'alimentação + saudável e sustentável'
+                      ? '9, Cogumelos, tofu, seitan'
+                      : '8, Cogumelos, tofu, seitan'
                   }
                 />
 
@@ -620,20 +624,20 @@ export default class mealNew extends Component {
                 <Picker.Item
                   label="por mim em casa"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '10' : '5'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '10' : '5'
                   }
                 />
 
                 <Picker.Item
                   label="Por mim e outra pessoa em casa"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '8' : '4'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '8' : '4'
                   }
                 />
                 <Picker.Item
                   label="por outra pessoa em casa"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '6' : '3'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '6' : '3'
                   }
                 />
 
@@ -641,14 +645,14 @@ export default class mealNew extends Component {
                 <Picker.Item
                   label="Pré-confecionado (indústria ou retalho alimentar)"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '2' : '1'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '2' : '1'
                   }
                 />
 
                 <Picker.Item
                   label="Nenhuma (consumido in natura)"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '4' : '2'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '4' : '2'
                   }
                 />
               </Picker>
@@ -671,43 +675,43 @@ export default class mealNew extends Component {
                 <Picker.Item
                   label="batatas"
                   value={
-                    current_user.goal == 'alimentação sustentável'
-                      ? '3, '
-                      : '4, '
+                    current_user.goal == 'alimentação sustentável' || 'alimentação + saudável e sustentável'
+                      ? '3, batatas'
+                      : '4, batatas'
                   }
                 />
-                <Picker.Item label="arroz" value="3, 0" />
-                <Picker.Item label="Massa, couscous, polenta" value="3, " />
+                <Picker.Item label="arroz" value="3, arroz" />
+                <Picker.Item label="Massa, couscous, polenta" value="3, Massa, couscous, polenta" />
                 <Picker.Item
                   label="Pão, pita, wrap, tortilla, crepe, pizza"
-                  value="2, 0"
+                  value="2, Pão, pita, wrap, tortilla, crepe, pizza"
                 />
                 <Picker.Item
                   label="Leguminosas secas (grão, feijão, lentilhas)"
-                  value="10, "
+                  value="10, Leguminosas secas (grão, feijão, lentilhas)"
                 />
                 <Picker.Item
                   label="Leguminosas verdes (ervilhas, favas, edamame)"
                   value={
-                    current_user.goal == 'alimentação sustentável'
-                      ? '8, '
-                      : '7, '
+                    current_user.goal == 'alimentação sustentável' || 'alimentação + saudável e sustentável'
+                      ? '8, Leguminosas verdes (ervilhas, favas, edamame)'
+                      : '7, Leguminosas verdes (ervilhas, favas, edamame)'
                   }
                 />
                 <Picker.Item
                   label="Quinoa, bulgur, arroz, massa ou couscous integrais"
                   value={
-                    current_user.goal == 'alimentação sustentável'
-                      ? '10, '
-                      : '9, '
+                    current_user.goal == 'alimentação sustentável' || 'alimentação + saudável e sustentável'
+                      ? '10, Quinoa, bulgur, arroz, massa ou couscous integrais'
+                      : '9, Quinoa, bulgur, arroz, massa ou couscous integrais'
                   }
                 />
                 <Picker.Item
                   label="Batata doce, milho doce, beterraba"
                   value={
-                    current_user.goal == 'alimentação sustentável'
-                      ? '5, '
-                      : '6, '
+                    current_user.goal == 'alimentação sustentável' || 'alimentação + saudável e sustentável'
+                      ? '5, Batata doce, milho doce, beterraba'
+                      : '6, Batata doce, milho doce, beterraba'
                   }
                 />
 
@@ -735,20 +739,20 @@ export default class mealNew extends Component {
                 <Picker.Item
                   label="por mim em casa"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '8' : '5'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '8' : '5'
                   }
                 />
 
                 <Picker.Item
                   label="Por mim e outra pessoa em casa"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '6' : '4'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '6' : '4'
                   }
                 />
                 <Picker.Item
                   label="por outra pessoa em casa"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '5' : '3'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '5' : '3'
                   }
                 />
 
@@ -756,14 +760,14 @@ export default class mealNew extends Component {
                 <Picker.Item
                   label="Pré-confecionado (indústria ou retalho alimentar)"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '2' : '1'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '2' : '1'
                   }
                 />
 
                 <Picker.Item
                   label="Nenhuma (consumido in natura)"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '3' : '2'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '3' : '2'
                   }
                 />
               </Picker>
@@ -784,31 +788,31 @@ export default class mealNew extends Component {
                 <Picker.Item label="hortícolas" value="hortícolas" />
                 <Picker.Item
                   label="Alface, agrião, rúcula, tomate para salada, pepino, pimento, aipo, rabanetes, couve roxa"
-                  value="7, "
+                  value="7, Alface, agrião, rúcula, tomate para salada, pepino, pimento, aipo, rabanetes, couve roxa"
                 />
                 <Picker.Item
                   label="Cebola, tomate ou produtos de tomate para cozinhar, alho, alho francês"
-                  value="5, "
+                  value="5, Cebola, tomate ou produtos de tomate para cozinhar, alho, alho francês"
                 />
                 <Picker.Item
                   label="Couves (portuguesa, lombardo, coração, branca, chinesa), grelos, espinafres, nabiças, acelgas"
-                  value="10, "
+                  value="10, Couves (portuguesa, lombardo, coração, branca, chinesa), grelos, espinafres, nabiças, acelgas"
                 />
                 <Picker.Item
                   label="Couves (flor, bróculos, romanesco, bruxelas), feijão verde, ervilhas de vagem (tortas, de quebrar)"
-                  value="10, "
+                  value="10, Couves (flor, bróculos, romanesco, bruxelas), feijão verde, ervilhas de vagem (tortas, de quebrar)"
                 />
                 <Picker.Item
                   label="Cenoura, abóbora, nabo, cheróvias, chuchu, curgete, beringela"
-                  value="8, "
+                  value="8, Cenoura, abóbora, nabo, cheróvias, chuchu, curgete, beringela"
                 />
                 <Picker.Item
                   label="Espargos, alcachofras, endívias"
-                  value="9, "
+                  value="9, Espargos, alcachofras, endívias"
                 />
-                <Picker.Item label="Cogumelos" value="6, " />
+                <Picker.Item label="Cogumelos" value="6, Cogumelos" />
 
-                <Picker.Item label="nenhuma" value="0, " />
+                <Picker.Item label="nenhuma" value="0, nenhuma" />
               </Picker>
             </Pressable>
 
@@ -831,20 +835,20 @@ export default class mealNew extends Component {
                 <Picker.Item
                   label="por mim em casa"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '8' : '5'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '8' : '5'
                   }
                 />
 
                 <Picker.Item
                   label="Por mim e outra pessoa em casa"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '6' : '4'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '6' : '4'
                   }
                 />
                 <Picker.Item
                   label="por outra pessoa em casa"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '5' : '3'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '5' : '3'
                   }
                 />
 
@@ -852,13 +856,13 @@ export default class mealNew extends Component {
                 <Picker.Item
                   label="Pré-confecionado (indústria ou retalho alimentar)"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '2' : '1'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '2' : '1'
                   }
                 />
                 <Picker.Item
                   label="Nenhuma (consumido in natura)"
                   value={
-                    current_user.goal == 'cozinhar mais e melhor' ? '3' : '2'
+                    current_user.goal == 'cozinhar mais e melhor' || 'alimentação + saudável e natural' ? '3' : '2'
                   }
                 />
               </Picker>
@@ -951,15 +955,6 @@ export default class mealNew extends Component {
                 composição do prato
               </Text>
             </Pressable>
-
-            <CheckBox
-              style={styles.vege}
-              title="vegetariano"
-              checked={this.state.vegetarian}
-              onPress={() =>
-                this.setState({vegetarian: !this.state.vegetarian})
-              }
-            />
 
             <TouchableOpacity
               onPress={this._newMeal.bind(this)}
@@ -1056,7 +1051,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   button: {
-    borderRadius: 20,
+
     padding: 12,
     elevation: 2,
     width: 200,
@@ -1080,7 +1075,7 @@ const styles = StyleSheet.create({
   vege: {
     marginTop: 20,
     backgroundColor: 'white',
-    borderRadius: 20,
+
   },
   prot: {
     backgroundColor: '#f07971',
@@ -1105,7 +1100,7 @@ const styles = StyleSheet.create({
     color: '#838383',
   },
   confec: {
-    borderRadius: 20,
+
     elevation: 2,
     width: 270,
   },

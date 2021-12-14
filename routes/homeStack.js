@@ -10,6 +10,7 @@ import currentWeekMeals from '../screens/currentWeekMeals';
 import VegetarianMeals from '../screens/VegetarianMeals';
 import pieChart from '../screens/pieChart';
 import Score from '../screens/Score';
+import Daymeal from '../screens/Daymeal';
 
 
 
@@ -48,6 +49,9 @@ VegetarianMeals: {
 },
 Score: {
   screen: Score
+},
+Daymeal: {
+  screen: Daymeal
 }
 
 

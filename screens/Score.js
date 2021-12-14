@@ -246,7 +246,7 @@ class Score extends Component {
 
 
              <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Meals')}
+              onPress={() => this.props.navigation.navigate('Home')}
               style={styles.confirm}>
               <Text style={styles.buttonText}>confirmar</Text>
             </TouchableOpacity>

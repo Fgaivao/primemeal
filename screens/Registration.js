@@ -16,6 +16,7 @@ import DatePicker from 'react-native-date-picker';
 
 var token = '';
 var email = '';
+var username = '';
 var password = '';
 var name = '';
 var dateofbirth = '';
@@ -36,6 +37,7 @@ export default class Registration extends Component {
     this.state = {
       token: token,
       email: 'example@example.com',
+      username: '',
       name: '',
       password: '',
       dateofbirth: new Date(),
@@ -58,6 +60,7 @@ export default class Registration extends Component {
   _userSignup() {
     let value = ({
       email,
+      username,
       password,
       name,
       dateofbirth,
@@ -77,7 +80,8 @@ export default class Registration extends Component {
         },
         body: JSON.stringify({
           user: {
-            email: value.email,
+
+            username: value.username,
             name: value.name,
             password: value.password,
             dateofbirth: value.dateofbirth,
@@ -94,7 +98,7 @@ export default class Registration extends Component {
           this.storeToken(token, responseData.token);
           this.props.navigation.navigate('Login');
 
-          console.log(responseData);
+          console.log("ERRORS", responseData);
         })
 
         .done();
@@ -105,6 +109,7 @@ export default class Registration extends Component {
     const {navigation} = this.props;
     let {
       email,
+      username,
       password,
       name,
       dateofbirth,
@@ -126,24 +131,33 @@ export default class Registration extends Component {
         <View style={styles.addmeal}>
           <Text style={styles.perfil}>Perfil</Text>
 
+          <View style={styles.textinput}>
           <TextInput
-            caretHidden
-            autoCapitalize="none"
-            autoCorrect={false}
-            keyboardType="email-address"
-            autoCompleteType="email"
-            onChangeText={(txt) => this.setState({email: txt})}
-            placeholder="email"></TextInput>
+            style={styles.login}
+            onChangeText={(txt) => this.setState({username: txt})}
+            placeholder="username"></TextInput>
+            </View>
 
+
+          <View style={styles.textinput}>
           <TextInput
             style={styles.login}
             onChangeText={(txt) => this.setState({name: txt})}
             placeholder="nome"></TextInput>
+            </View>
+
+            <View style={styles.textinput}>
 
           <TextInput
             style={styles.login}
             onChangeText={(txt) => this.setState({password: txt})}
             placeholder="password"></TextInput>
+
+            </View>
+
+            <View style={styles.dateInput}>
+
+            <Text style={{textAlign: 'center', marginTop: 20}}>Data de Nascimento</Text>
 
           <DatePicker
             style={styles.datepicker}
@@ -152,6 +166,10 @@ export default class Registration extends Component {
             mode="date"
           />
 
+          </View>
+
+          <View style={styles.textinput}>
+
           <TextInput
             style={styles.login}
             onChangeText={(txt) => this.setState({weight: txt})}
@@ -159,12 +177,20 @@ export default class Registration extends Component {
             keyboardType="numeric"
             ></TextInput>
 
+            </View>
+
+            <View style={styles.textinput}>
+
           <TextInput
             style={styles.login}
             onChangeText={(txt) => this.setState({height: txt})}
             placeholder="altura"
             keyboardType="numeric"
             ></TextInput>
+
+            </View>
+
+            <View style={styles.textinput}>
 
           <TouchableOpacity
             style={{
@@ -180,6 +206,8 @@ export default class Registration extends Component {
                 fontSize: 25,
                 width: 200,
                 textAlign: 'center',
+                height: 20,
+                marginTop: 20
               }}
               onValueChange={(itemValue, itemIndex) =>
                 this.setState({gender: itemValue})
@@ -190,12 +218,18 @@ export default class Registration extends Component {
             </Picker>
           </TouchableOpacity>
 
+          </View>
+
+          <View style={styles.textinput}>
+
           <TouchableOpacity
             style={{
               textAlign: 'center',
               fontSize: 25,
               width: '50%',
               marginBottom: 20,
+              height: 20,
+              marginTop: 20
             }}>
             <Picker
               selectedValue={this.state.diet}
@@ -220,12 +254,19 @@ export default class Registration extends Component {
             </Picker>
           </TouchableOpacity>
 
+          </View>
+
+
+          <View style={styles.textinput}>
+
           <TouchableOpacity
             style={{
               textAlign: 'center',
               fontSize: 25,
               width: '50%',
               marginBottom: 20,
+              height: 20,
+              marginTop: 20
             }}>
             <Picker
               selectedValue={this.state.goal}
@@ -240,24 +281,30 @@ export default class Registration extends Component {
               }>
               <Picker.Item label="objetivo pessoal" value="objetivo pessoal" />
               <Picker.Item
-                label="cozinhar mais e melhor"
-                value="cozinhar mais e melhor"
+                label="alimentação + saudável e variada"
+                value="alimentação + saudável e variada"
               />
               <Picker.Item
-                 label="perder peso"
-                 value="perder peso" />
+                 label="alimentação + saudável e sustentável"
+                 value="alimentação + saudável e sustentável" />
               <Picker.Item
-                label="comer de forma mais saudável"
-                value="comer de forma mais saudável"
+                label="alimentação + saudável e equilibrada"
+                value="alimentação + saudável e equilibrada"
               />
               <Picker.Item
-                label="alimentação sustentável"
-                value="alimentação sustentável"
+                label="alimentação + saudável e natural"
+                value="alimentação + saudável e natural"
               />
             </Picker>
           </TouchableOpacity>
 
-          <Button title="continuar" onPress={this._userSignup.bind(this)} />
+          </View>
+
+          <TouchableOpacity style={styles.criarconta} onPress={this._userSignup.bind(this)}>
+
+          <Text style={{textAlign: 'center', color: 'white', paddingRight:20, paddingLeft: 20, fontSize:18, paddingTop: 10, paddingBottom: 10, fontWeight: '100'}}>Criar Conta</Text>
+
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -283,15 +330,14 @@ const styles = StyleSheet.create({
     color: '#b1b1b1',
     fontSize: 25,
     fontWeight: 'bold',
+    marginBottom: 30
   },
   login: {
     textAlign: 'center',
     fontSize: 15,
     backgroundColor: 'white',
-    marginBottom: 20,
-    marginLeft: 20,
-    marginRight: 20,
-    width: 300,
+    width: '100%',
+    borderBottomColor: '#cecece'
   },
   datepicker: {
     height: 50,
@@ -313,4 +359,24 @@ const styles = StyleSheet.create({
   contact: {
     textAlign: 'center',
   },
+  textinput:{
+    borderBottomColor: '#cecece',
+    borderBottomWidth: 1,
+    width:'60%',
+    textAlign:'center'
+  },
+
+  dateinput:{
+    borderBottomColor: '#cecece',
+    borderBottomWidth: 1,
+
+  },
+  email:{
+    textAlign: 'center'
+  },
+  criarconta:{
+    backgroundColor: '#42aae0',
+    borderRadius: 25,
+    marginTop: 35
+  }
 });

@@ -14,6 +14,9 @@ var ingredientes = require('../ingredientes.jpg');
 var confeccao = require('../confeccao.jpg');
 var composicao = require('../composicao.jpg');
 var score = require('../score.jpg');
+var limao = require('../limao.png');
+var avatar = require('../avatar.png');
+var grafico = require('../grafico.png');
 
 export default class Instructions extends Component {
 static navigationOptions = {
@@ -27,29 +30,40 @@ static navigationOptions = {
           activeIndex:0,
           carouselItems: [
           {
+              image: limao,
+              title:"Bem-vindo à prime meal",
+              text: "Um diário alimentar visual que te ajuda a alcançar objetivos pessoais de dieta sem culpa nem esforço. Insere os ingredientes principais o teu jantar e como foram preparados, e ganha pontos e informação diária sobre como os teus hábitos alimentares estão a contribuit para o teu objetivo",
+          },
+          {
+              image: avatar,
+              title:"Cria o teu perfil",
+              text: "Cria o teu perfil e escolhe o teu objetivo",
+          },
+          {
               image: nome,
               title:"Dá um nome ao teu jantar",
               text: "Indica o nome do prato principal",
           },
           {
-              image: ingredientes,
-              title:"Aponta os principais ingredientes",
-              text: "Indica os ingredientes de compõe o prato, por grupo alimentar",
-          },
-          {
               image: confeccao,
-              title:"Aponta o modo de confecção",
-              text: "Indica como foram confecionados estes ingredientes principais",
+              title:"Regista os teus ingredientes e a confecção",
+              text: "Indica os ingredientes principais e modo de confecção, por grupo alimentar de compõe o prato, por grupo alimentar",
           },
+
           {
               image: composicao,
-              title:"Aponta uma composição",
-              text: "Indica as percentagens das proporções de cada ingrediente principal",
+              title:"Regista as quantidades",
+              text: "Indica as quantidades de cada ingrediente principal no teu prato",
           },
           {
               image: score,
               title:"Recebe a tua pontuação",
-              text: "Recebe a pontuação do teu jantar e acumula pontos ao longo da semana",
+              text: "Acumula diariamente pontos e distinções prime meal para alcançares o objetivo traçado",
+          },
+          {
+              image: grafico,
+              title:"Avalia a tua performance",
+              text: "Recebe semanalmente informação sobre os teus hábitos alimentares e como melhorá-los",
           },
 
         ]
@@ -134,7 +148,7 @@ static navigationOptions = {
             </View>
 
             <TouchableOpacity style={{position:'absolute', bottom: 100, backgroundColor: '#42aae1', padding:10, borderRadius: 25, zIndex: 999, alignSelf:'center'}} onPress={() => this.props.navigation.navigate('Login')} >
-                <Text style={{color:'white'}}>Ver mais</Text>
+                <Text style={{color:'white'}}>Sair das instruções</Text>
             </TouchableOpacity>
 
                 { this.pagination }

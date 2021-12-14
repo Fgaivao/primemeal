@@ -18,6 +18,7 @@ import currentWeekMeals from './screens/currentWeekMeals';
 import VegetarianMeals from './screens/VegetarianMeals';
 import Instructions from './screens/Instructions';
 import Score from './screens/Score';
+import dayMeal from './screens/dayMeal';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
@@ -33,7 +34,7 @@ function MyStack() {
 
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Instruções" component={Instructions} />
-      <Stack.Screen name="Perfil" component={Profile} />
+      <Stack.Screen name="Home" component={Profile} />
       <Stack.Screen name="Sign Up" component={Registration} />
       <Stack.Screen name="Meals" component={Meals} />
       <Stack.Screen name="Adicionar Refeição" component={NewMeal} />
@@ -41,6 +42,7 @@ function MyStack() {
       <Stack.Screen name="currentWeekMeals" component={currentWeekMeals} />
       <Drawer.Screen name="Refeições Vegetarianas" component={VegetarianMeals} />
       <Drawer.Screen name="Score" component={Score} />
+      <Drawer.Screen name="dayMeal" component={dayMeal} />
 
 
     </Stack.Navigator>
@@ -68,9 +70,10 @@ function MyDrawer() {
 
 
       <Drawer.Screen name="Login" component={MyStack} />
+      <Drawer.Screen name="Home" component={Profile} />
       <Drawer.Screen name="Instruções" component={Instructions} />
       {/*<Drawer.Screen name="Sign Up" component={Registration} />*/}
-       <Drawer.Screen name="Perfil" component={Profile} />
+
       {/* <Drawer.Screen name="Meals" component={Meals} />*/}
        <Drawer.Screen name="Adicionar Refeição" component={NewMeal} />
       {/* <Drawer.Screen name="currentWeek" component={currentWeek} />*/}
